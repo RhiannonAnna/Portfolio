@@ -1,0 +1,48 @@
+.center {
+    margin: auto; 
+    max-width: 1400px;
+  }
+
+.table {
+padding-bottom: 5%;
+padding-left: 20%;
+padding-right: 15%;
+padding-top: 2%;
+max-width: 600px;
+margin: auto;
+}
+
+h1 {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    font-size: 34px;
+}
+
+h3{
+    flex: 1;
+    text-align: center;
+
+}
+
+i {
+padding: 5%;
+}
+
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url("/assets/letters2.jpg");
+  
+    /* Set a specific height */
+    height: 50%;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 10%;  
+    margin: 10px 0
+  }
+
+ 

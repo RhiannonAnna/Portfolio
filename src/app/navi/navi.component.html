@@ -1,0 +1,21 @@
+<nav class="custom-nav-class" ngStickyNav>
+  <mat-card>
+      <mat-icon routerLink="/home" svgIcon="logo" class="logo1"></mat-icon>
+    <span class="hide-on-desktop">
+      <button mat-button [matMenuTriggerFor]="menu"><i class="material-icons">
+          menu
+        </i></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/aboutme">About me</button>
+        <button mat-menu-item routerLink="/gallery">Gallery</button>
+        <button mat-menu-item routerLink="/contact">Contact</button>
+      </mat-menu>
+    </span>
+    <span class="hide-on-mobiles">
+      <button mat-button routerLink="/home">Home</button>
+      <button mat-button routerLink="/aboutme">About me</button>
+      <button mat-button routerLink="/gallery">Gallery</button>
+      <button mat-button routerLink="/contact">Contact</button>
+    </span>
+  </mat-card>
+</nav>

@@ -1,0 +1,26 @@
+<div class="break2">
+</div>
+<section class="mat-typography">
+  <h2>{{album.name}}</h2>
+</section>
+<div class="flex-container all-center-litle-pic" *ngIf="album.showBigPictures==false">
+  <div class="flex-item" *ngFor="let pic of picturesListTemp">
+    <mat-card>
+      <a (click)="selectPicture(pic.id)"><img src="{{pic.linkToMiniature}}"></a>
+    </mat-card>
+  </div>
+</div>
+<div *ngIf="album.showBigPictures==true" class="all-center">
+  <div *ngFor="let pic of picturesListTemp">
+    <img mat-card-image class=albumImages src="{{pic.linkToPicture}}">
+  </div>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal" *ngIf="selectedPicture">
+  <!-- The Close Button -->
+  <span class="close" (click)="closePicture()">&times;</span>
+  <!-- Modal Content (The Image) -->
+  <img [src]="selectedPicture.linkToPicture" class="modal-content">
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>

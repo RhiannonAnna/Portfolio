@@ -1,0 +1,164 @@
+<mat-card-header class="purple">
+</mat-card-header>
+<div class="break">
+</div>
+<div class="center">
+  <div class="flex-container content2">
+    <div class="flex-item">
+      <mat-card>
+        <img mat-card-image src="../assets/omnie.jpg" alt="self portrait">
+      </mat-card>
+    </div>
+
+    <div class="flex-item">
+      <mat-card>
+        <mat-card-title>About me</mat-card-title>
+        <mat-card-subtitle>Anna Andrzejewska-Godecka</mat-card-subtitle>
+        <p>I studied Graphic Design, graduated Fine Art and Social Pedagogy. <br>
+          Now I am a Graphic Designer, Web Designer and UI/UX Designer. <br>
+          My other skillset is designing and implementing Wordpress-based websites. <br>
+          I know the basics of HTML, CSS, Anguar, on a day to day basis I use Adobe suite <br>
+          as well (Photoshop, inDesign, Illustrator). Both the Digital Painting and traditional <br>
+          drawing and painting techniques are my strengths. <br>
+          I designed visual identification and I was responsible for the whole design and implementation:<br>
+          from first sketches to a ready product. <br>
+          I am passionate about photography and photo retouching.
+        </p>
+        <br>
+        <p>UI/UX skills: <br>
+          User Interface - User experience<br>
+          - User-Centered Design - Human-Centered Design- User Research - Design Thinking, Typography.<br>
+          <br>
+          Visual Design Skills:<br>
+          Graphic design, Illustration, Branding, Infographics, Print design, Typography.</p>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div class="break">
+</div>
+<mat-horizontal-stepper [linear]="isLinear" #stepper class="stepper">
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Software skills</ng-template>
+      <mat-list>
+        <mat-list-item>Photoshop</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Ilustrator</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>InDesign</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>XD</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Wordpress</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Angular, HTML, CSS</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Figma</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>InVision</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Visual Studio</mat-list-item>
+      </mat-list>
+      <br>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Education</ng-template>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <h3>2016 - 2018 Graphic design </h3>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <p> « Institute of Information Technologies in Katowice »</p>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <h3>2008 - 2012 Fine Art </h3>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <p> « Academy of Jan Długosz in Częstochowa » </p>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <h3>2004 – 2007 Social pedagogy </h3>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <p> « Silesian School of Management Gen. Jerzy Ziętek in Katowice »</p>
+        </mat-list-item>
+      </mat-list>
+      <br>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Courses</ng-template>
+    <mat-list role="list">
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              29.06.2019 in Capgemini
+            </mat-panel-title>
+            <mat-panel-description>
+              See {{panelOpenState ? 'less' : 'more'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>Introduction to Angular </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              23-24.09.2018 with Iga Mościchowska
+            </mat-panel-title>
+            <mat-panel-description>
+              See {{panelOpenState ? 'less' : 'more'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>Designing useful interfaces </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Udemy courses
+            </mat-panel-title>
+            <mat-panel-description>
+              See {{panelOpenState ? 'less' : 'more'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>Professional Retouch in Photoshop</p>
+          <p>Web Design and UX</p>
+          <p>Website Creation Course in HTML and CSS from Basic to Expert</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Udacity
+            </mat-panel-title>
+            <mat-panel-description>
+              See {{panelOpenState ? 'less' : 'more'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p> Intro to HTML and CSS</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-list>
+    <br>
+    <br>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

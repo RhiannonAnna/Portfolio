@@ -1,0 +1,34 @@
+<mat-card-header class="purple">
+</mat-card-header>
+<div class="break2">
+</div>
+<section class="mat-typography">
+    <h2>Portfolio</h2>
+</section>
+<div class="break2">
+</div>
+
+<div *ngIf="albumListTemp.length == 0">
+    <mat-card class="mainGraphic">
+        <img (click)="selectAlbumsByAlbumType(1)" mat-card-image src="../assets/gallery1.png">
+    </mat-card>
+    <mat-card class="mainGraphic">
+        <img (click)="selectAlbumsByAlbumType(2)" mat-card-image src="../assets/gallery2.png">
+    </mat-card>
+    <mat-card class="mainGraphic">
+        <img (click)="selectAlbumsByAlbumType(3)" mat-card-image src="../assets/gallery3.png">
+    </mat-card>
+</div>
+
+<div class="flex-container all-center" *ngIf="albumListTemp.length > 0">
+    <div class="flex-item" *ngFor="let cover of albumListTemp">
+        <mat-card>
+            <a routerLink="/album/{{cover.id}}"><img mat-card-image src="{{cover.linkToMainPictureMiniature}}"></a>
+        </mat-card>
+        <div style="clear: left;"></div>
+    </div>
+</div>
+<div>
+    <button mat-raised-button class="goright" color="primary" (click)="back()"
+        *ngIf="albumListTemp.length > 0">back</button>
+</div>
