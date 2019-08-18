@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Album } from '../../models/album';
-import { Picture } from '../../models/picture';
-import { GalleryService } from '../../gallery.service';
-
+import { Album } from 'src/app/models/album';
+import { GalleryService } from '../../shared/db-entities.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-gallery',
@@ -11,20 +10,16 @@ import { GalleryService } from '../../gallery.service';
 })
 export class GalleryComponent implements OnInit {
 
-  albumListTemp:  Album[] = [];
+  albumListTemp: Album[] = [];
 
-  constructor(private galleryService: GalleryService) {}
-
+  constructor(private galleryService: GalleryService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    let albumId: number = +this.route.snapshot.paramMap.get('id');
+    this.getAlbumsByAlbumType(albumId);
   }
- 
-  back(): void {
-  this.albumListTemp = [];
 
-}
-
-selectAlbumsByAlbumType(albumType: number): void {
-  this.albumListTemp = this.galleryService.getAlbumsByAlbumType(albumType);
-}
+  getAlbumsByAlbumType(albumType: number): void {
+    this.albumListTemp = this.galleryService.getAlbumsByAlbumType(albumType);
+  }
 }

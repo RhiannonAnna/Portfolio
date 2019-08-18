@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GalleryService } from '../../gallery.service';
+import { GalleryService } from '../../shared/db-entities.service';
 import { ActivatedRoute } from '@angular/router';
 import { Picture } from '../../models/picture';
 import { Album } from '../../models/album';

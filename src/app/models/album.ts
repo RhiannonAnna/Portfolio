@@ -5,7 +5,6 @@ export class Album {
     id: number;
     description: string;
     name: string;
-    date: string;
     linkToMainPictureMiniature: string;
     showBigPictures: boolean;
     albumType: number;
@@ -16,7 +15,6 @@ export class Album {
             this.id = 0;
             this.description = "";
             this.name = "";
-            this.date = "";
             this.linkToMainPictureMiniature = "";
             this.showBigPictures = false;
             this.albumType = 0;

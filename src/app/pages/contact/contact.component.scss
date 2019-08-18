@@ -1,9 +1,4 @@
-.center {
-    margin: auto; 
-    max-width: 1400px;
-  }
-
-.table {
+.table-contact {
 padding-bottom: 5%;
 padding-left: 20%;
 padding-right: 15%;
@@ -30,13 +25,8 @@ padding: 5%;
 }
 
 .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: url("/assets/letters2.jpg");
-  
-    /* Set a specific height */
+    background-image: url("http://rhiannonarts.pl/wp-content/uploads/2019/08/letters2.jpg");
     height: 50%;
-  
-    /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -6,8 +6,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    //justify-content: space-between;
-    //margin: auto;
     align-items: flex-start;
 }
 .flex-item {
@@ -18,9 +16,32 @@ body {
     margin: 0 auto;
 }
 
+.break-200 {
+    margin: 200px;
+  }
+.break-100 {
+    margin: 100px;
+  }
+.break-50 {
+    margin: 50px;
+  }
+
 h1, h2, h3, p {
     color: #673ab7;
 }
+.break-30 {
+    margin: 30px;
+  }
+
+.purple-break {
+    background-color: #673ab7;
+    height: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 1%;
+  }
 
 @media (max-width: 767px) {
     .hide-on-mobiles {
